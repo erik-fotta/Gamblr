@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>379558603883-cbc38vqcjfceg9ov4ala8jugdpudn0qs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.379558603883-cbc38vqcjfceg9ov4ala8jugdpudn0qs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBT-cB_5BWtb82iSLVocYjFpOtk2WSlYyY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>379558603883</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Erik-Fotta.Gamblr</string>
+	<key>PROJECT_ID</key>
+	<string>gamblr-aeedd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gamblr-aeedd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:379558603883:ios:c6bb3cf3f58ccfc7df552e</string>
+</dict>
+</plist>

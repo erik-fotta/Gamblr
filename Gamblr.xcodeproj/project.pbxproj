@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		135EC7CA281CDC4B009176D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 135EC7C9281CDC4B009176D9 /* GoogleService-Info.plist */; };
+		135EC7CC281CF25F009176D9 /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EC7CB281CF25F009176D9 /* CryptoViewController.swift */; };
+		135EC7CE281CF26D009176D9 /* BetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EC7CD281CF26D009176D9 /* BetViewController.swift */; };
 		13735C5E281CD9D20077D142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13735C5D281CD9D20077D142 /* AppDelegate.swift */; };
 		13735C60281CD9D20077D142 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13735C5F281CD9D20077D142 /* SceneDelegate.swift */; };
-		13735C62281CD9D20077D142 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13735C61281CD9D20077D142 /* ViewController.swift */; };
+		13735C62281CD9D20077D142 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13735C61281CD9D20077D142 /* HomeViewController.swift */; };
 		13735C65281CD9D20077D142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13735C63281CD9D20077D142 /* Main.storyboard */; };
 		13735C67281CD9D40077D142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13735C66281CD9D40077D142 /* Assets.xcassets */; };
 		13735C6A281CD9D40077D142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13735C68281CD9D40077D142 /* LaunchScreen.storyboard */; };
+		13A920EC281DCAB6008179C4 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A920EB281DCAB6008179C4 /* Crypto.swift */; };
+		13A920EE281DCABF008179C4 /* Cryptos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A920ED281DCABF008179C4 /* Cryptos.swift */; };
+		13A920F0281DFD41008179C4 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A920EF281DFD41008179C4 /* APIKeys.swift */; };
+		4A0193D474B34FC5497102DF /* Pods_Gamblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C914E8877E35C6B0D57AB40 /* Pods_Gamblr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		135EC7C9281CDC4B009176D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		135EC7CB281CF25F009176D9 /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		135EC7CD281CF26D009176D9 /* BetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetViewController.swift; sourceTree = "<group>"; };
 		13735C5A281CD9D20077D142 /* Gamblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13735C5D281CD9D20077D142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13735C5F281CD9D20077D142 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13735C61281CD9D20077D142 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13735C61281CD9D20077D142 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13735C64281CD9D20077D142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13735C66281CD9D40077D142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13735C69281CD9D40077D142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13735C6B281CD9D40077D142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13A920EB281DCAB6008179C4 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		13A920ED281DCABF008179C4 /* Cryptos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptos.swift; sourceTree = "<group>"; };
+		13A920EF281DFD41008179C4 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		2BB34DABAFC7A151F3E78170 /* Pods-Gamblr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamblr.debug.xcconfig"; path = "Target Support Files/Pods-Gamblr/Pods-Gamblr.debug.xcconfig"; sourceTree = "<group>"; };
+		3C914E8877E35C6B0D57AB40 /* Pods_Gamblr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gamblr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		898C4CFD791753144C23A136 /* Pods-Gamblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamblr.release.xcconfig"; path = "Target Support Files/Pods-Gamblr/Pods-Gamblr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A0193D474B34FC5497102DF /* Pods_Gamblr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135EC7D0281CF27D009176D9 /* Main VCs */ = {
+			isa = PBXGroup;
+			children = (
+				13735C61281CD9D20077D142 /* HomeViewController.swift */,
+				135EC7CB281CF25F009176D9 /* CryptoViewController.swift */,
+				135EC7CD281CF26D009176D9 /* BetViewController.swift */,
+			);
+			path = "Main VCs";
+			sourceTree = "<group>";
+		};
 		13735C51281CD9D20077D142 = {
 			isa = PBXGroup;
 			children = (
 				13735C5C281CD9D20077D142 /* Gamblr */,
 				13735C5B281CD9D20077D142 /* Products */,
+				3D1F42F903B5FFD46A906112 /* Pods */,
+				95A899352D5CC8FC8F6898E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +87,34 @@
 			children = (
 				13735C5D281CD9D20077D142 /* AppDelegate.swift */,
 				13735C5F281CD9D20077D142 /* SceneDelegate.swift */,
-				13735C61281CD9D20077D142 /* ViewController.swift */,
+				135EC7D0281CF27D009176D9 /* Main VCs */,
+				13A920EB281DCAB6008179C4 /* Crypto.swift */,
+				13A920ED281DCABF008179C4 /* Cryptos.swift */,
+				13A920EF281DFD41008179C4 /* APIKeys.swift */,
 				13735C63281CD9D20077D142 /* Main.storyboard */,
-				13735C66281CD9D40077D142 /* Assets.xcassets */,
 				13735C68281CD9D40077D142 /* LaunchScreen.storyboard */,
+				13735C66281CD9D40077D142 /* Assets.xcassets */,
 				13735C6B281CD9D40077D142 /* Info.plist */,
+				135EC7C9281CDC4B009176D9 /* GoogleService-Info.plist */,
 			);
 			path = Gamblr;
+			sourceTree = "<group>";
+		};
+		3D1F42F903B5FFD46A906112 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BB34DABAFC7A151F3E78170 /* Pods-Gamblr.debug.xcconfig */,
+				898C4CFD791753144C23A136 /* Pods-Gamblr.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		95A899352D5CC8FC8F6898E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C914E8877E35C6B0D57AB40 /* Pods_Gamblr.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13735C6E281CD9D40077D142 /* Build configuration list for PBXNativeTarget "Gamblr" */;
 			buildPhases = (
+				597F715532649431448379EE /* [CP] Check Pods Manifest.lock */,
 				13735C56281CD9D20077D142 /* Sources */,
 				13735C57281CD9D20077D142 /* Frameworks */,
 				13735C58281CD9D20077D142 /* Resources */,
+				33D14BEDEA9621CFC2CE2C0E /* [CP] Embed Pods Frameworks */,
+				ECCB321EE1A1DE7BF2A8CFFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13735C6A281CD9D40077D142 /* LaunchScreen.storyboard in Resources */,
+				135EC7CA281CDC4B009176D9 /* GoogleService-Info.plist in Resources */,
 				13735C67281CD9D40077D142 /* Assets.xcassets in Resources */,
 				13735C65281CD9D20077D142 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +187,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33D14BEDEA9621CFC2CE2C0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gamblr/Pods-Gamblr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gamblr/Pods-Gamblr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gamblr/Pods-Gamblr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		597F715532649431448379EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gamblr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECCB321EE1A1DE7BF2A8CFFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gamblr/Pods-Gamblr-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gamblr/Pods-Gamblr-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gamblr/Pods-Gamblr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		13735C56281CD9D20077D142 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13735C62281CD9D20077D142 /* ViewController.swift in Sources */,
+				13A920EC281DCAB6008179C4 /* Crypto.swift in Sources */,
+				13A920EE281DCABF008179C4 /* Cryptos.swift in Sources */,
+				13735C62281CD9D20077D142 /* HomeViewController.swift in Sources */,
+				135EC7CE281CF26D009176D9 /* BetViewController.swift in Sources */,
+				135EC7CC281CF25F009176D9 /* CryptoViewController.swift in Sources */,
 				13735C5E281CD9D20077D142 /* AppDelegate.swift in Sources */,
+				13A920F0281DFD41008179C4 /* APIKeys.swift in Sources */,
 				13735C60281CD9D20077D142 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +400,7 @@
 		};
 		13735C6F281CD9D40077D142 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB34DABAFC7A151F3E78170 /* Pods-Gamblr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +429,7 @@
 		};
 		13735C70281CD9D40077D142 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898C4CFD791753144C23A136 /* Pods-Gamblr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
