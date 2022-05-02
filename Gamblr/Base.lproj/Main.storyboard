@@ -146,13 +146,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPC-wU-Um4">
-                                                <rect key="frame" x="0.0" y="0.0" width="155" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="41"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 90" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umn-h2-WcQ">
+                                                <rect key="frame" x="123.5" y="0.0" width="93" height="41"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zco-KI-pTj">
-                                                <rect key="frame" x="185" y="0.0" width="155" height="41"/>
+                                                <rect key="frame" x="246.5" y="0.0" width="93.5" height="41"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -212,6 +218,7 @@
                         <outlet property="buyButton" destination="5R6-X5-YAR" id="syV-H7-ygG"/>
                         <outlet property="currentPortfolioLabel" destination="3BK-I0-pab" id="vnY-sA-CVq"/>
                         <outlet property="currentPriceLabel" destination="Jc2-fr-S7x" id="jDO-QJ-mxf"/>
+                        <outlet property="dayLabel" destination="umn-h2-WcQ" id="X2D-tE-7Sy"/>
                         <outlet property="holdButton" destination="eNX-FC-WAM" id="mc3-b5-eP7"/>
                         <outlet property="lastBoughtLabel" destination="1aN-nN-WEy" id="LLv-Q0-r2v"/>
                         <outlet property="lastSoldLabel" destination="mi8-ih-0se" id="fc6-vS-mFF"/>
@@ -275,10 +282,10 @@
             </objects>
             <point key="canvasLocation" x="1032" y="749"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="eNy-ZO-eVG">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qgq-2E-Zca" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qgq-2E-Zca" customClass="MainTabBarController" customModule="Gamblr" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JTU-eN-jLg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

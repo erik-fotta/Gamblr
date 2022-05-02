@@ -19,11 +19,14 @@ class CryptoViewController: UIViewController {
     @IBOutlet weak var sellButton: UIButton!
     @IBOutlet weak var youLabel: UILabel!
     @IBOutlet weak var passiveLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
     
     let formatter = NumberFormatter()
+    var day: Int = 0
     var coinIndex: Int = 0
     var index: Int = 0
     var portfolioValue: Double = 1000.0
+    var passiveValue: Double = 1000.0
     var cryptoHeld: Double = 0.0
     var boughtIndex = 0
     var soldIndex = 0
@@ -94,6 +97,16 @@ class CryptoViewController: UIViewController {
     }
     
     func updateUserInterface(cIndex: Int) {
+        if day >= 90 {
+            buyButton.isEnabled = false
+            sellButton.isEnabled = false
+            //holdButton.isEnabled = false
+            start()
+            return
+        } else {
+            dayLabel.text = "\(day) / 90"
+            day += 1
+        }
         currentPortfolioLabel.text = "$\(portfolioValue.rounded())"
         lastBoughtLabel.text = String(dataStore[cIndex][boughtIndex])
         lastSoldLabel.text = String(dataStore[cIndex][soldIndex])
@@ -107,6 +120,8 @@ class CryptoViewController: UIViewController {
             sellButton.isEnabled = false
         }
         passiveLabel.text = String("\(formatter.string(from: (dataStore[coinIndex][index] / dataStore[coinIndex][0] * 100 - 100) as NSNumber)!)%")
+        //passiveValue = passiveValue +
+        //passiveLabel.text = String("\(formatter.string(from: passiveValue / 1000 * 100 - 100 as NSNumber)!)%")
         youLabel.text = String("\(formatter.string(from: (portfolioValue / 1000 * 100 - 100) as NSNumber)!)%")
         if index > 0 {
             if dataStore[cIndex][index] > dataStore[cIndex][index - 1] {
@@ -134,6 +149,7 @@ class CryptoViewController: UIViewController {
         if currentPriceLabel.text == "_________" {
             print("Start a game first")
         } else {
+            holdButton.isEnabled = true
             cryptoHeld = portfolioValue / dataStore[coinIndex][index]
             held = true
             if held {
@@ -149,6 +165,7 @@ class CryptoViewController: UIViewController {
         if currentPriceLabel.text == "_________" {
             print("Start a game first")
         } else {
+            holdButton.isEnabled = true
             held = false
             if held {
                 portfolioValue = cryptoHeld * dataStore[coinIndex][index]
@@ -160,13 +177,18 @@ class CryptoViewController: UIViewController {
         }
     }
     
-    @IBAction func startButtonPressed(_ sender: Any) {
+    func start() {
+        day = 0
+        dayLabel.text = "0 / 90"
+        //passiveValue = passiveValue + (passiveValue * (dataStore[coinIndex][index] / dataStore[coinIndex][0] * 100 - 100))
+        //passiveLabel.text = "\(formatter.string(from: passiveValue as NSNumber)!)%"
         coinIndex = Int.random(in: 0...coinList.count - 1)
         symbolLabel.text = coinList[coinIndex]
         currentPriceLabel.text = String(dataStore[coinIndex][index])
         symbolLabel.text = "???"
         lastSoldLabel.text = "_________"
         lastBoughtLabel.text = "_________"
+        
         
         if held {
             held = false
@@ -181,6 +203,10 @@ class CryptoViewController: UIViewController {
             updateUserInterface(cIndex: coinIndex)
         }
         index = 0
+    }
+    
+    @IBAction func startButtonPressed(_ sender: Any) {
+        start()
     }
 }
 
