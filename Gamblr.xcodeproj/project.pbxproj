@@ -67,6 +67,7 @@
 		13457F7E281FB3150020BE09 /* Trash */ = {
 			isa = PBXGroup;
 			children = (
+				135EC7C9281CDC4B009176D9 /* GoogleService-Info.plist */,
 				13A920F3281F13C2008179C4 /* MainTabBarController.swift */,
 				135EC7CD281CF26D009176D9 /* BetViewController.swift */,
 				13A920EB281DCAB6008179C4 /* Crypto.swift */,
@@ -133,7 +134,6 @@
 				13735C68281CD9D40077D142 /* LaunchScreen.storyboard */,
 				13735C66281CD9D40077D142 /* Assets.xcassets */,
 				13735C6B281CD9D40077D142 /* Info.plist */,
-				135EC7C9281CDC4B009176D9 /* GoogleService-Info.plist */,
 				13457F7E281FB3150020BE09 /* Trash */,
 			);
 			path = Gamblr;
