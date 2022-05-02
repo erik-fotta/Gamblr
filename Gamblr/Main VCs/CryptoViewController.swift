@@ -20,23 +20,21 @@ class CryptoViewController: UIViewController {
     @IBOutlet weak var youLabel: UILabel!
     @IBOutlet weak var passiveLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
     let formatter = NumberFormatter()
     var day: Int = 0
     var coinIndex: Int = 0
     var index: Int = 0
-    var portfolioValue: Double = 1000.0
+    var portfolioValue: Double = 0.0
     var passiveValue: Double = 1000.0
     var cryptoHeld: Double = 0.0
     var boughtIndex = 0
     var soldIndex = 0
     var held: Bool = false
     var dataStore: [[Double]] = []
-    var price_list: [Double] = [] {
-        didSet {
-            print(price_list)
-        }
-    }
+    var price_list: [Double] = []
+    var tradeSession = TradeSession()
     var cryptoPrice: Double = 0
     var coinList: [String] = ["BTC", "ADA", "CAR", "DOGE", "CPY", "GEM", "PLA", "TRAC"]
     
@@ -59,20 +57,15 @@ class CryptoViewController: UIViewController {
                 print("something went wrong")
                 return
             }
-            
             var result: Response?
             do {
                 result = try JSONDecoder().decode(Response.self, from: data)
             } catch {
                 print("Failed to convert: \(error.localizedDescription)")
             }
-            
             guard let json = result else {
                 return
             }
-            //print(json.Data.TimeTo)
-            //print(json.Data.Data[0].close)
-            
             var prices: [Double] = []
             for item in json.Data.Data {
                 prices.append(item.close)
@@ -89,25 +82,37 @@ class CryptoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         formatter.maximumFractionDigits = 2
-        currentPortfolioLabel.text = "$\(portfolioValue)"
         for symbol in coinList {
             let urlString = "https://min-api.cryptocompare.com/data/v2/histoday?fsym=\(symbol)&tsym=USD&limit=90&api_key=24543762f05b931c28076af579eb185f52d3818da25fec3910bfb2cfe7663050"
             getData(url: urlString)
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        currentPortfolioLabel.text = "$\(formatter.string(from: portfolioValue as NSNumber)!)"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        tradeSession.endingPortfolioBalance = portfolioValue
+        tradeSession.cryptoEndingPrice = dataStore[coinIndex][index]
+        tradeSession.daysTraded = day - 1
+        tradeSession.cryptoSymbol = coinList[coinIndex]
+        startButton.isEnabled = true
+    }
+    
     func updateUserInterface(cIndex: Int) {
         if day >= 90 {
+            dayLabel.text = "\(day) / 90"
             buyButton.isEnabled = false
             sellButton.isEnabled = false
-            //holdButton.isEnabled = false
-            start()
+            holdButton.isEnabled = false
+            oneButtonAlert(title: "End of Period", message: "You have reached the end of your 90 day trading window. Return to the Home screen to see your progress and start new trades")
             return
         } else {
             dayLabel.text = "\(day) / 90"
             day += 1
         }
-        currentPortfolioLabel.text = "$\(portfolioValue.rounded())"
+        currentPortfolioLabel.text = "$\(formatter.string(from: portfolioValue as NSNumber)!)"
         lastBoughtLabel.text = String(dataStore[cIndex][boughtIndex])
         lastSoldLabel.text = String(dataStore[cIndex][soldIndex])
         currentPriceLabel.text = String(dataStore[cIndex][index])
@@ -120,8 +125,6 @@ class CryptoViewController: UIViewController {
             sellButton.isEnabled = false
         }
         passiveLabel.text = String("\(formatter.string(from: (dataStore[coinIndex][index] / dataStore[coinIndex][0] * 100 - 100) as NSNumber)!)%")
-        //passiveValue = passiveValue +
-        //passiveLabel.text = String("\(formatter.string(from: passiveValue / 1000 * 100 - 100 as NSNumber)!)%")
         youLabel.text = String("\(formatter.string(from: (portfolioValue / 1000 * 100 - 100) as NSNumber)!)%")
         if index > 0 {
             if dataStore[cIndex][index] > dataStore[cIndex][index - 1] {
@@ -130,7 +133,6 @@ class CryptoViewController: UIViewController {
                 currentPriceLabel.textColor = .red
             }
         }
-        
     }
     
     @IBAction func holdButtonPressed(_ sender: Any) {
@@ -178,25 +180,23 @@ class CryptoViewController: UIViewController {
     }
     
     func start() {
+        tradeSession.started = true
         day = 0
         dayLabel.text = "0 / 90"
-        //passiveValue = passiveValue + (passiveValue * (dataStore[coinIndex][index] / dataStore[coinIndex][0] * 100 - 100))
-        //passiveLabel.text = "\(formatter.string(from: passiveValue as NSNumber)!)%"
         coinIndex = Int.random(in: 0...coinList.count - 1)
         symbolLabel.text = coinList[coinIndex]
         currentPriceLabel.text = String(dataStore[coinIndex][index])
         symbolLabel.text = "???"
         lastSoldLabel.text = "_________"
         lastBoughtLabel.text = "_________"
-        
-        
+        tradeSession.cryptoStartingPrice = dataStore[coinIndex][index]
+        tradeSession.startingPortfolioBalance = portfolioValue
         if held {
             held = false
             if held {
                 portfolioValue = cryptoHeld * dataStore[coinIndex][index]
             }
             cryptoHeld = 0
-            
             updateUserInterface(cIndex: coinIndex)
         } else {
             cryptoHeld = portfolioValue / dataStore[coinIndex][index]
@@ -207,6 +207,7 @@ class CryptoViewController: UIViewController {
     
     @IBAction func startButtonPressed(_ sender: Any) {
         start()
+        startButton.isEnabled = false
     }
 }
 

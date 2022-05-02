@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13457F80281FB3360020BE09 /* TradeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13457F7F281FB3360020BE09 /* TradeSession.swift */; };
+		13457F82281FC41A0020BE09 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13457F81281FC41A0020BE09 /* HistoryTableViewCell.swift */; };
+		13457F84281FE2370020BE09 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13457F83281FE2370020BE09 /* UIViewController+alert.swift */; };
+		13457F86281FE8C90020BE09 /* TradeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13457F85281FE8C90020BE09 /* TradeDetailViewController.swift */; };
 		135EC7CA281CDC4B009176D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 135EC7C9281CDC4B009176D9 /* GoogleService-Info.plist */; };
 		135EC7CC281CF25F009176D9 /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EC7CB281CF25F009176D9 /* CryptoViewController.swift */; };
 		135EC7CE281CF26D009176D9 /* BetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EC7CD281CF26D009176D9 /* BetViewController.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13457F7F281FB3360020BE09 /* TradeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeSession.swift; sourceTree = "<group>"; };
+		13457F81281FC41A0020BE09 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		13457F83281FE2370020BE09 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
+		13457F85281FE8C90020BE09 /* TradeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeDetailViewController.swift; sourceTree = "<group>"; };
 		135EC7C9281CDC4B009176D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		135EC7CB281CF25F009176D9 /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
 		135EC7CD281CF26D009176D9 /* BetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetViewController.swift; sourceTree = "<group>"; };
@@ -56,12 +64,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13457F7E281FB3150020BE09 /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				13A920F3281F13C2008179C4 /* MainTabBarController.swift */,
+				135EC7CD281CF26D009176D9 /* BetViewController.swift */,
+				13A920EB281DCAB6008179C4 /* Crypto.swift */,
+				13A920ED281DCABF008179C4 /* Cryptos.swift */,
+				13A920EF281DFD41008179C4 /* APIKeys.swift */,
+			);
+			path = Trash;
+			sourceTree = "<group>";
+		};
+		13457F87281FF26E0020BE09 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				13457F83281FE2370020BE09 /* UIViewController+alert.swift */,
+				13457F7F281FB3360020BE09 /* TradeSession.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		13457F88281FF27F0020BE09 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				13735C5D281CD9D20077D142 /* AppDelegate.swift */,
+				13735C5F281CD9D20077D142 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		135EC7D0281CF27D009176D9 /* Main VCs */ = {
 			isa = PBXGroup;
 			children = (
 				13735C61281CD9D20077D142 /* HomeViewController.swift */,
+				13457F81281FC41A0020BE09 /* HistoryTableViewCell.swift */,
 				135EC7CB281CF25F009176D9 /* CryptoViewController.swift */,
-				135EC7CD281CF26D009176D9 /* BetViewController.swift */,
+				13457F85281FE8C90020BE09 /* TradeDetailViewController.swift */,
 			);
 			path = "Main VCs";
 			sourceTree = "<group>";
@@ -87,18 +126,15 @@
 		13735C5C281CD9D20077D142 /* Gamblr */ = {
 			isa = PBXGroup;
 			children = (
-				13735C5D281CD9D20077D142 /* AppDelegate.swift */,
-				13735C5F281CD9D20077D142 /* SceneDelegate.swift */,
-				13A920F3281F13C2008179C4 /* MainTabBarController.swift */,
+				13457F87281FF26E0020BE09 /* Utilities */,
+				13457F88281FF27F0020BE09 /* Delegates */,
 				135EC7D0281CF27D009176D9 /* Main VCs */,
-				13A920EB281DCAB6008179C4 /* Crypto.swift */,
-				13A920ED281DCABF008179C4 /* Cryptos.swift */,
-				13A920EF281DFD41008179C4 /* APIKeys.swift */,
 				13735C63281CD9D20077D142 /* Main.storyboard */,
 				13735C68281CD9D40077D142 /* LaunchScreen.storyboard */,
 				13735C66281CD9D40077D142 /* Assets.xcassets */,
 				13735C6B281CD9D40077D142 /* Info.plist */,
 				135EC7C9281CDC4B009176D9 /* GoogleService-Info.plist */,
+				13457F7E281FB3150020BE09 /* Trash */,
 			);
 			path = Gamblr;
 			sourceTree = "<group>";
@@ -255,12 +291,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A920EC281DCAB6008179C4 /* Crypto.swift in Sources */,
+				13457F80281FB3360020BE09 /* TradeSession.swift in Sources */,
 				13A920EE281DCABF008179C4 /* Cryptos.swift in Sources */,
+				13457F84281FE2370020BE09 /* UIViewController+alert.swift in Sources */,
 				13735C62281CD9D20077D142 /* HomeViewController.swift in Sources */,
 				13A920F4281F13C2008179C4 /* MainTabBarController.swift in Sources */,
 				135EC7CE281CF26D009176D9 /* BetViewController.swift in Sources */,
 				135EC7CC281CF25F009176D9 /* CryptoViewController.swift in Sources */,
+				13457F86281FE8C90020BE09 /* TradeDetailViewController.swift in Sources */,
 				13735C5E281CD9D20077D142 /* AppDelegate.swift in Sources */,
+				13457F82281FC41A0020BE09 /* HistoryTableViewCell.swift in Sources */,
 				13A920F0281DFD41008179C4 /* APIKeys.swift in Sources */,
 				13735C60281CD9D20077D142 /* SceneDelegate.swift in Sources */,
 			);

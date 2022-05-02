@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Crypto: Codable {
-    var close: Double
-}
+//struct Crypto: Codable {
+//    var close: Double
+//}
