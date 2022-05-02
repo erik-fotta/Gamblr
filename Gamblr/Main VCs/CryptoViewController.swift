@@ -36,7 +36,7 @@ class CryptoViewController: UIViewController {
     var price_list: [Double] = []
     var tradeSession = TradeSession()
     var cryptoPrice: Double = 0
-    var coinList: [String] = ["BTC", "ADA", "CAR", "DOGE", "CPY", "GEM", "PLA", "TRAC"]
+    var coinList: [String] = ["BTC", "ADA", "CAR", "DOGE", "CPY", "GEM", "PLA", "TRAC", "AVAX", "XTC", "LTC", "DASH", "LINK", "AMO", "AMP" , "ALGO", "MANA", "ETH", "SOL", "BAND"]
     
     struct Response: Codable {
         let Data: MyResult
